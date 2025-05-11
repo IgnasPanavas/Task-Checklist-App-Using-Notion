@@ -3,6 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>com.apple.security.application-groups</key>
-	<array/>
+	<array>
+		<string>group.com.yourname.habittracker</string>
+	</array>
 </dict>
 </plist>

@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct Habit_TrackerApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @AppStorage("isSetupComplete") var isSetupComplete: Bool = false
+    @AppStorage("notion_db_name") var dbName: String = ""
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+            WindowGroup {
+                if isSetupComplete {
+                    HabitListView()  // or FirstPageViewer
+                        .environmentObject(NotionManager())
+                } else {
+                    WelcomeView()
+                }
+            }
         }
-    }
 }

@@ -13,6 +13,5 @@ struct HabitWidgetBundle: WidgetBundle {
     var body: some Widget {
         HabitWidget()
         HabitWidgetControl()
-        HabitWidgetLiveActivity()
     }
 }

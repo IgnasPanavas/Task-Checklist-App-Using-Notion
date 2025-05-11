@@ -5,20 +5,19 @@
 //  Created by Ignas Panavas on 5/8/25.
 //
 
+
 import SwiftUI
 
 struct HabitView: View {
     var habit: Habit
+    
+    @EnvironmentObject var notionManager: NotionManager
+    @State private var pageContent: String = "Tap the button to load the first page."
     var body: some View {
-        HStack {
+        VStack(alignment: .leading) {
+            HabitListView()
             
         }
     }
-    
 }
 
-struct HabitView_Previews: PreviewProvider {
-    static var previews: some View {
-        HabitView()
-    }
-}
