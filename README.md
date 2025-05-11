@@ -23,7 +23,8 @@ A SwiftUI-based habit-tracking app that integrates with Notion and offers a home
   - Store your `NOTION_SECRET` in the App Group’s `UserDefaults` (or shared Keychain): ```swift UserDefaults(suiteName: "group.com.yourname.habittracker")?.set("<YOUR_NOTION_SECRET>", forKey: "NOTION_SECRET") ```
 4. **Configure the Widget**:
     - In the **Widget Extension**, enable the same App Group and ensure Info.plist has no hardcoded secret.
-    - The widget reads habits and the queued-removal queue from the shared suite. 5. **Run**:
+    - The widget reads habits and the queued-removal queue from the shared suite.
+5. **Run**:
     - Build & run the **HabitTracker** scheme on a device or simulator.
     - Add the **HabitTracker Widget** to your home screen.
 ## Architecture 
